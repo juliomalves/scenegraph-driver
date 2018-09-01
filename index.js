@@ -127,19 +127,3 @@ module.exports = {
     By,
     until
 }
-// exports.Browser = capabilities.Browser;
-// exports.Button = input.Button;
-// exports.Capabilities = capabilities.Capabilities;
-// exports.Capability = capabilities.Capability;
-// exports.Condition = webdriver.Condition;
-// exports.FileDetector = input.FileDetector;
-// exports.Origin = input.Origin;
-// exports.Session = session.Session;
-// exports.ThenableWebDriver = ThenableWebDriver;
-// exports.WebDriver = webdriver.WebDriver;
-// exports.WebElement = webdriver.WebElement;
-// exports.WebElementCondition = webdriver.WebElementCondition;
-// exports.WebElementPromise = webdriver.WebElementPromise;
-// exports.error = error;
-// exports.logging = logging;
-// exports.promise = promise;
