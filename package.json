@@ -1,0 +1,19 @@
+{
+	"name": "scenegraph-driver",
+	"version": "0.0.1",
+	"description": "",
+	"author": "Julio Alves",
+	"scripts": {
+		"test": "mocha tests/**/*.js"
+	},
+	"devDependencies": {
+		"mocha": "5.2.0"
+	},
+	"dependencies": {
+		"archiver": "3.0.0",
+		"request": "2.88.0",
+		"request-promise-native": "1.0.5",
+		"telnet-client": "0.15.8",
+		"xmldom": "0.1.27"
+	}
+}

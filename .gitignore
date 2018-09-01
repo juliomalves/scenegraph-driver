@@ -1,0 +1,10 @@
+# Node generated files
+node_modules
+package-lock.json
+
+# OS generated files
+__MACOSX
+.DS_Store
+
+# Editors
+.vscode*
