@@ -56,10 +56,11 @@ class Builder {
         this.devPassword = undefined;
     }
     setConfig(config) {
-        this.host = config.host;
-        this.sourceFolder = config.sourceFolder;
-        this.buildPath = config.buildPath;
-        this.devPassword = config.devPassword;
+        const { host, sourceFolder, buildPath, devPassword } = config;
+        this.host = host;
+        this.sourceFolder = sourceFolder;
+        this.buildPath = buildPath;
+        this.devPassword = devPassword;
         return this;
     }
     setHost(host) {
