@@ -18,7 +18,7 @@
 		"archiver": "3.0.0",
 		"request": "2.88.0",
 		"request-promise-native": "1.0.5",
-		"telnet-client": "0.15.8",
+		"telnet-client": "0.16.1",
 		"xmldom": "0.1.27"
 	}
 }
