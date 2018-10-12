@@ -104,15 +104,12 @@ class Builder {
         if (typeof this.devPassword !== 'string') {
             throw new Error(`Developer password must be a string, but is <${typeof this.devPassword}>`);
         }
-        
-        const driver = new SGDriver(this.host, sgClient, this.devPassword);    
+        const driver = new SGDriver(this.host, sgClient, this.devPassword);
+        const zip = zipUtil(this.sourceFolder, this.buildPath, this.host, this.devPassword);  
         await driver.connect();
         await driver.sendKey(Key.HOME, 1000);
-        
-        const zip = zipUtil(this.sourceFolder, this.buildPath, this.host, this.devPassword);
         await zip.build();
         await zip.upload();
-
         return driver;
     }
 }
