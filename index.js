@@ -1,5 +1,5 @@
-const { SGDriver } = require('./lib/sg-driver');
-const { By } = require('./lib/by');
+const SGDriver = require('./lib/sg-driver');
+const By = require('./lib/by');
 const until = require('./lib/until');
 const zipUtil = require('./lib/zip-util');
 const sgClient = require('./lib/sg-client');
