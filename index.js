@@ -1,8 +1,8 @@
 const SGDriver = require('./lib/sg-driver');
 const By = require('./lib/by');
 const until = require('./lib/until');
-const zipUtil = require('./lib/zip-util');
-const sgClient = require('./lib/sg-client');
+const ZipUtil = require('./lib/utils/zip');
+const sgClient = require('./lib/utils/sg-client');
 
 const Key = {
     HOME: 'Home',
@@ -50,70 +50,63 @@ const Key = {
 
 class Builder {
     constructor() {
-        this.host = undefined;
-        this.sourceFolder = undefined;
-        this.buildPath = undefined;
-        this.devPassword = undefined;
+        this.config = {};
     }
     setConfig(config) {
-        const { host, sourceFolder, buildPath, devPassword } = config;
-        this.host = host;
-        this.sourceFolder = sourceFolder;
-        this.buildPath = buildPath;
-        this.devPassword = devPassword;
+        this.config = config;
         return this;
     }
     setHost(host) {
-        this.host = host;
+        this.config.host = host;
         return this;
     }
     getHost() {
-        return this.host;
+        return this.config.host;
     }
     setSource(source) {
-        this.sourceFolder = source;
+        this.config.sourceFolder = source;
         return this;
     }
     getSource() {
-        return this.sourceFolder;
+        return this.config.sourceFolder;
     }
     setBuildPath(buildPath) {
-        this.buildPath = buildPath;
+        this.config.buildPath = buildPath;
         return this;
     }
     getBuildPath() {
-        return this.buildPath;
+        return this.config.buildPath;
     }
     setDevPassword(devPassword) {
-        this.devPassword = devPassword;
+        this.config.devPassword = devPassword;
         return this;
     }
     getDevPassword() {
-        return this.devPassword;
+        return this.config.devPassword;
     }
     async build() {
-        if (typeof this.sourceFolder !== 'string') {
-            throw new Error(`Source folder must be a string, but is <${typeof this.sourceFolder}>`);
+        const config = this.config;
+        if (typeof config.sourceFolder !== 'string') {
+            throw new Error(`Source folder must be a string, but is <${typeof config.sourceFolder}>`);
         }
-        if (typeof this.buildPath !== 'string') {
-            throw new Error(`Build path must be a string, but is <${typeof this.buildPath}>`);
+        if (typeof config.buildPath !== 'string') {
+            throw new Error(`Build path must be a string, but is <${typeof config.buildPath}>`);
         }
-        if (typeof this.host !== 'string') {
-            throw new Error(`Host url must be a string, but is <${typeof this.host}>`);
+        if (typeof config.host !== 'string') {
+            throw new Error(`Host url must be a string, but is <${typeof config.host}>`);
         }
-        if (typeof this.devPassword !== 'string') {
-            throw new Error(`Developer password must be a string, but is <${typeof this.devPassword}>`);
+        if (typeof config.devPassword !== 'string') {
+            throw new Error(`Developer password must be a string, but is <${typeof config.devPassword}>`);
         }
-        const driver = new SGDriver(this.host, sgClient, this.devPassword);
-        const zip = zipUtil(this.sourceFolder, this.buildPath, this.host, this.devPassword);  
+        const driver = new SGDriver(config.host, sgClient, config.devPassword);
+        const zip = new ZipUtil(config);  
         await driver.connect();
         await driver.sendKey(Key.HOME, 1000);
-        await zip.build();
+        await zip.archive();
         await zip.upload();
         return driver;
     }
 }
-
 
 module.exports = {
     Builder,
