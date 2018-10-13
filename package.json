@@ -12,6 +12,7 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
+		"eslint": "5.7.0",
 		"mocha": "5.2.0"
 	},
 	"dependencies": {

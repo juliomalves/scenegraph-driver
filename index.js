@@ -46,7 +46,7 @@ const Key = {
     X: 'Lit_x',
     Y: 'Lit_y',
     Z: 'Lit_z'
-}
+};
 
 class Builder {
     constructor() {
@@ -113,4 +113,4 @@ module.exports = {
     Key,
     By,
     until
-}
+};
