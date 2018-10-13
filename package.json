@@ -4,7 +4,8 @@
 	"description": "SceneGraph automation library for Roku development.",
 	"author": "Julio Alves <juliomalves@gmail.com>",
 	"scripts": {
-		"test": "mocha tests/**/*.js"
+		"test": "mocha tests/**/*.js",
+		"lint": "eslint index.js lib/**/*.js"
 	},
 	"repository": {
 		"type": "git",
