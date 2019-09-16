@@ -1,6 +1,6 @@
 {
   "name": "scenegraph-driver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SceneGraph automation library for Roku development.",
   "author": "Julio Alves <juliomalves@gmail.com>",
   "scripts": {
