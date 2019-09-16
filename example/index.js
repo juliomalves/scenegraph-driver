@@ -10,9 +10,9 @@ const configJson = require('./driver.config.json');
         await driver.wait(until.documentLoaded(), 5000);
         await driver.wait(until.elementLocated(By.id('categoriesLabelList')), 2000);
         await driver.sendKeys([
-            Key.DOWN, 
-            Key.DOWN, 
-            Key.OK, 
+            Key.DOWN,
+            Key.DOWN,
+            Key.OK,
             Key.OK
         ]);
         await driver.wait(until.elementLocated(By.id('exampleVector2DAnimation')), 2000);

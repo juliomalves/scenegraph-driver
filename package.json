@@ -1,26 +1,26 @@
 {
-	"name": "scenegraph-driver",
-	"version": "0.1.0",
-	"description": "SceneGraph automation library for Roku development.",
-	"author": "Julio Alves <juliomalves@gmail.com>",
-	"scripts": {
-		"test": "mocha tests/**/*.js",
-		"lint": "eslint index.js lib/**/*.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/julio-alves/scenegraph-driver.git"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"eslint": "^6.3.0",
-		"mocha": "^6.2.0"
-	},
-	"dependencies": {
-		"archiver": "^3.1.1",
-		"request": "^2.88.0",
-		"request-promise-native": "^1.0.7",
-		"telnet-client": "^1.0.4",
-		"xmldom": "^0.1.27"
-	}
+  "name": "scenegraph-driver",
+  "version": "0.1.0",
+  "description": "SceneGraph automation library for Roku development.",
+  "author": "Julio Alves <juliomalves@gmail.com>",
+  "scripts": {
+    "test": "mocha tests/**/*.js",
+    "lint": "eslint lib/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/julio-alves/scenegraph-driver.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "mocha": "^6.2.0",
+  },
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "telnet-client": "^1.0.5",
+    "xmldom": "^0.1.27"
+  }
 }
