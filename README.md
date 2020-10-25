@@ -2,18 +2,7 @@
 
 SceneGraph automation library for Roku development.
 
-
-## Getting Started
-
-
-
-## Description
-
-
-
-## Contributing
-
-Feel free to submit any pull request or issue to contribute to this project. Suggestions for new features are also welcomed.
+**NOTE:** As of December 2019, Roku has released an official automation testing tool: https://github.com/rokudev/automated-channel-testing.
 
 
 ## Authors
