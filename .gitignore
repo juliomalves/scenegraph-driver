@@ -1,6 +1,6 @@
 # Node generated files
 node_modules
-package-lock.json
+.npmrc
 
 # OS generated files
 __MACOSX
