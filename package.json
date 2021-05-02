@@ -2,7 +2,7 @@
   "name": "scenegraph-driver",
   "version": "0.1.1",
   "description": "SceneGraph automation library for Roku development.",
-  "author": "Julio Alves <juliomalves@gmail.com>",
+  "author": "Julio Alves",
   "scripts": {
     "test": "mocha tests/**/*.js",
     "lint": "eslint lib/**/*.js"
